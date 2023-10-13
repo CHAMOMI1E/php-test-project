@@ -1,15 +1,25 @@
 @extends('base')
-
+@section('title_content')
+    Home page
+@endsection
 @section('main_content')
-<div class="container mx-auto my-5 text-lg border border-gray" data-bs-theme="dark">
-    <br>
-    <ul class="list-unstyled">
-    @if(request()->is('test'))
-        try again
-            @else
-                @for($i=0; $i<7; $i++) <li><a href="#" class="link-primary" style="font-size: 25px;">Primary ссылка</a></li><br> @endfor
-    @endif
+    <div class="container mx-auto my-5 text-lg " data-bs-theme="dark">
+        <figure class="text-center">
 
-</ul>
-</div>
+            <br>
+            <ul class="list-unstyled">
+                @if(request()->is('test'))
+                    try again
+                @else
+                    <li class="list-group-item"><a href="#"
+                                                   class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                                   style="font-size: 30px;">Primary ссылка</a></li>
+                    <p>Hello, World!</p>
+{{--                    {{ str_limit($text, $limit = 100, $end = '...') }}--}}
+                    <hr>
+                @endif
+
+            </ul>
+        </figure>
+    </div>
 @endsection
