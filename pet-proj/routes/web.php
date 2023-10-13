@@ -22,6 +22,8 @@ Route::get('/about', function ()
     return view('about');
 });
 
+Route::get('/test', function (){return view('home');});
+
 Route::get('/user/{id}/{name}', function ($id, $name)
 {
     return "$id - $name";
