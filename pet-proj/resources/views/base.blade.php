@@ -31,7 +31,7 @@
                     <a class="nav-link" href="#">О нас</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/form" class="nav-link">Create</a>
+                    <a href="/add_post" class="nav-link">Create</a>
                 </li>
             </ul>
 {{--            <ul class="navbar-nav me-auto mb-2 mb-lg-0">--}}

@@ -5,7 +5,16 @@
 @section('main_content')
 
     <div class="container mx-auto my-5 text-lg " data-bs-theme="dark">
-        <form action="/form/check" method="POST">
+        @if($errors->any())
+            <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+            </div>
+        @endif
+        <form action="/add_post/valid" method="post">
             @csrf
             <div class="mb-3">
                 <label for="theme" class="form-label">Название статьи</label>

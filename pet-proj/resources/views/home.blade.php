@@ -8,16 +8,16 @@
 
             <br>
             <ul class="list-unstyled">
-                @if(request()->is('test'))
-                    try again
-                @else
-                    <li class="list-group-item"><a href="#"
+                @foreach($posts as $post)
+                    <li class="list-group-item"><a href="/read/{{$post->id}}"
                                                    class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-                                                   style="font-size: 30px;">Primary ссылка</a></li>
-                    <p>Hello, World!</p>
-{{--                    {{ str_limit($text, $limit = 100, $end = '...') }}--}}
+                                                   style="font-size: 30px;">{{$post->theme}}</a></li>
+                    <p>{{ $post->text }}</p>
                     <hr>
-                @endif
+                @endforeach
+
+
+
 
             </ul>
         </figure>
